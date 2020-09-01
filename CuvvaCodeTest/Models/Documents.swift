@@ -7,11 +7,11 @@
 //
 
 import Foundation
-
+import RealmSwift
 // MARK: - Documents
-struct Documents: Codable {
-    let certificateURL: String
-    let termsURL: String
+class Documents: Object, Codable {
+    @objc dynamic var certificateURL: String?
+    @objc dynamic var termsURL: String?
 
     enum CodingKeys: String, CodingKey {
         case certificateURL = "certificate_url"

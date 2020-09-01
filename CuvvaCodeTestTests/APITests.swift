@@ -72,11 +72,10 @@ class APITests: XCTestCase {
 
         let task = networkManger.decodingTask(with: request, decodingType: Policy.self) { (json, error) in
             decodingExpectation.fulfill()
-            guard let error = error else {
-                XCTFail("JSON data was parsed")
-                return
+            if let policy = json as? Policy {
+                XCTAssertNil(policy.uniqueKey)
             }
-            XCTAssertTrue(error == .invalidData, "Error was not equal to invalid Data")
+            
         }
         task.resume()
         waitForExpectations(timeout: 100, handler: nil)

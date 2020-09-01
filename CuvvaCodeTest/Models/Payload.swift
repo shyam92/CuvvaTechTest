@@ -7,22 +7,23 @@
 //
 
 import Foundation
-
+import RealmSwift
 // MARK: - Payload
-struct Payload: Codable {
-    let userID: String?
-    let userRevision: String?
-    let policyID: String
-    let originalPolicyID: String?
-    let referenceCode: String?
-    let startDate: String?
-    let endDate: String?
-    let incidentPhone: String?
-    let vehicle: Vehicle?
-    let documents: Documents?
-    let pricing: Pricing?
-    let newEndDate: String?
-
+class Payload: Object, Codable {
+    @objc dynamic var userID: String?
+    @objc dynamic var userRevision: String?
+    @objc dynamic var policyID: String
+    @objc dynamic var originalPolicyID: String?
+    @objc dynamic var referenceCode: String?
+    @objc dynamic var startDate: String?
+    @objc dynamic var endDate: String?
+    @objc dynamic var incidentPhone: String?
+    @objc dynamic var endDateNew: String?
+    
+    @objc dynamic var vehicle: Vehicle?
+    @objc dynamic var documents: Documents?
+    @objc dynamic var pricing: Pricing?
+    
     enum CodingKeys: String, CodingKey {
         case userID = "user_id"
         case userRevision = "user_revision"
@@ -35,6 +36,6 @@ struct Payload: Codable {
         case vehicle
         case documents
         case pricing
-        case newEndDate = "new_end_date"
+        case endDateNew = "new_end_date"
     }
 }
