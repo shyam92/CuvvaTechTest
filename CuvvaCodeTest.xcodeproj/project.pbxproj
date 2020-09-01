@@ -3,17 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		337CA57624FD269000B74F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA57524FD269000B74F23 /* AppDelegate.swift */; };
-		337CA57824FD269000B74F23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA57724FD269000B74F23 /* SceneDelegate.swift */; };
-		337CA57A24FD269000B74F23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA57924FD269000B74F23 /* ViewController.swift */; };
 		337CA57D24FD269000B74F23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337CA57B24FD269000B74F23 /* Main.storyboard */; };
 		337CA57F24FD269100B74F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 337CA57E24FD269100B74F23 /* Assets.xcassets */; };
 		337CA58224FD269100B74F23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337CA58024FD269100B74F23 /* LaunchScreen.storyboard */; };
-		337CA58D24FD269100B74F23 /* CuvvaCodeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA58C24FD269100B74F23 /* CuvvaCodeTestTests.swift */; };
+		33F501C824FD287E00123A82 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501C724FD287E00123A82 /* URLBuilder.swift */; };
+		33F501CA24FD291D00123A82 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501C924FD291D00123A82 /* APIProtocol.swift */; };
+		33F501CC24FD294400123A82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501CB24FD294400123A82 /* NetworkManager.swift */; };
+		33F501D724FE508A00123A82 /* URLBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501D624FE508A00123A82 /* URLBuilderTests.swift */; };
+		33F501DD24FE518600123A82 /* Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501DA24FE518600123A82 /* Policy.swift */; };
+		33F501DE24FE518600123A82 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501DB24FE518600123A82 /* Payload.swift */; };
+		33F501DF24FE518600123A82 /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501DC24FE518600123A82 /* Documents.swift */; };
+		33F501E224FE55AF00123A82 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501E124FE55AF00123A82 /* HomeViewModel.swift */; };
+		33F501E624FE567E00123A82 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501E524FE567E00123A82 /* HomeViewController.swift */; };
+		33F501E824FE58BB00123A82 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501E724FE58BB00123A82 /* APITests.swift */; };
+		6E4DA6CA4345D87403C8ED84 /* Pods_CuvvaCodeTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC827422D4C772E817E08F2 /* Pods_CuvvaCodeTest.framework */; };
+		CAC34715E67FFEAC808E4F89 /* Pods_CuvvaCodeTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B07A2DCDE6F5C59CAAB2767 /* Pods_CuvvaCodeTestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +36,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B07A2DCDE6F5C59CAAB2767 /* Pods_CuvvaCodeTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuvvaCodeTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28ADD5B4CEC262C96DAA14A9 /* Pods-CuvvaCodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuvvaCodeTest.release.xcconfig"; path = "Target Support Files/Pods-CuvvaCodeTest/Pods-CuvvaCodeTest.release.xcconfig"; sourceTree = "<group>"; };
 		337CA57224FD269000B74F23 /* CuvvaCodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuvvaCodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		337CA57524FD269000B74F23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		337CA57724FD269000B74F23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		337CA57924FD269000B74F23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		337CA57C24FD269000B74F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		337CA57E24FD269100B74F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		337CA58124FD269100B74F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		337CA58324FD269100B74F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		337CA58824FD269100B74F23 /* CuvvaCodeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuvvaCodeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		337CA58C24FD269100B74F23 /* CuvvaCodeTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuvvaCodeTestTests.swift; sourceTree = "<group>"; };
 		337CA58E24FD269100B74F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F501C724FD287E00123A82 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		33F501C924FD291D00123A82 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		33F501CB24FD294400123A82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		33F501D624FE508A00123A82 /* URLBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilderTests.swift; sourceTree = "<group>"; };
+		33F501DA24FE518600123A82 /* Policy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Policy.swift; sourceTree = "<group>"; };
+		33F501DB24FE518600123A82 /* Payload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
+		33F501DC24FE518600123A82 /* Documents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
+		33F501E124FE55AF00123A82 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		33F501E524FE567E00123A82 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		33F501E724FE58BB00123A82 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		4BC827422D4C772E817E08F2 /* Pods_CuvvaCodeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuvvaCodeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E45818F9D070E800FC0BBF2 /* Pods-CuvvaCodeTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuvvaCodeTestTests.debug.xcconfig"; path = "Target Support Files/Pods-CuvvaCodeTestTests/Pods-CuvvaCodeTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C9B1BBC5279118DA7DD533BD /* Pods-CuvvaCodeTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuvvaCodeTestTests.release.xcconfig"; path = "Target Support Files/Pods-CuvvaCodeTestTests/Pods-CuvvaCodeTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		E411AEC013B2607CDB79245B /* Pods-CuvvaCodeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuvvaCodeTest.debug.xcconfig"; path = "Target Support Files/Pods-CuvvaCodeTest/Pods-CuvvaCodeTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E4DA6CA4345D87403C8ED84 /* Pods_CuvvaCodeTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC34715E67FFEAC808E4F89 /* Pods_CuvvaCodeTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +88,8 @@
 				337CA57424FD269000B74F23 /* CuvvaCodeTest */,
 				337CA58B24FD269100B74F23 /* CuvvaCodeTestTests */,
 				337CA57324FD269000B74F23 /* Products */,
+				862F6747BE517ADBDDFCAE77 /* Pods */,
+				F1B94D45DB79F96AB0723724 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +105,13 @@
 		337CA57424FD269000B74F23 /* CuvvaCodeTest */ = {
 			isa = PBXGroup;
 			children = (
+				33F501E324FE55B400123A82 /* ViewControllers */,
+				33F501E024FE558600123A82 /* ViewModels */,
+				33F501CD24FD2A0200123A82 /* Models */,
+				337CA59724FD26C600B74F23 /* Networking */,
 				337CA57524FD269000B74F23 /* AppDelegate.swift */,
-				337CA57724FD269000B74F23 /* SceneDelegate.swift */,
-				337CA57924FD269000B74F23 /* ViewController.swift */,
-				337CA57B24FD269000B74F23 /* Main.storyboard */,
+				33F501E424FE55C700123A82 /* Storyboards */,
 				337CA57E24FD269100B74F23 /* Assets.xcassets */,
-				337CA58024FD269100B74F23 /* LaunchScreen.storyboard */,
 				337CA58324FD269100B74F23 /* Info.plist */,
 			);
 			path = CuvvaCodeTest;
@@ -93,10 +120,92 @@
 		337CA58B24FD269100B74F23 /* CuvvaCodeTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				337CA58C24FD269100B74F23 /* CuvvaCodeTestTests.swift */,
 				337CA58E24FD269100B74F23 /* Info.plist */,
+				33F501D624FE508A00123A82 /* URLBuilderTests.swift */,
+				33F501E724FE58BB00123A82 /* APITests.swift */,
 			);
 			path = CuvvaCodeTestTests;
+			sourceTree = "<group>";
+		};
+		337CA59724FD26C600B74F23 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				33F501C724FD287E00123A82 /* URLBuilder.swift */,
+				33F501C924FD291D00123A82 /* APIProtocol.swift */,
+				33F501CB24FD294400123A82 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		33F501CD24FD2A0200123A82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33F501D924FE518600123A82 /* API Models */,
+				33F501D024FE4F8400123A82 /* Database Models */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		33F501D024FE4F8400123A82 /* Database Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Database Models";
+			sourceTree = "<group>";
+		};
+		33F501D924FE518600123A82 /* API Models */ = {
+			isa = PBXGroup;
+			children = (
+				33F501DA24FE518600123A82 /* Policy.swift */,
+				33F501DB24FE518600123A82 /* Payload.swift */,
+				33F501DC24FE518600123A82 /* Documents.swift */,
+			);
+			path = "API Models";
+			sourceTree = "<group>";
+		};
+		33F501E024FE558600123A82 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				33F501E124FE55AF00123A82 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		33F501E324FE55B400123A82 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				33F501E524FE567E00123A82 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		33F501E424FE55C700123A82 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				337CA57B24FD269000B74F23 /* Main.storyboard */,
+				337CA58024FD269100B74F23 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		862F6747BE517ADBDDFCAE77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E411AEC013B2607CDB79245B /* Pods-CuvvaCodeTest.debug.xcconfig */,
+				28ADD5B4CEC262C96DAA14A9 /* Pods-CuvvaCodeTest.release.xcconfig */,
+				7E45818F9D070E800FC0BBF2 /* Pods-CuvvaCodeTestTests.debug.xcconfig */,
+				C9B1BBC5279118DA7DD533BD /* Pods-CuvvaCodeTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F1B94D45DB79F96AB0723724 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BC827422D4C772E817E08F2 /* Pods_CuvvaCodeTest.framework */,
+				0B07A2DCDE6F5C59CAAB2767 /* Pods_CuvvaCodeTestTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 337CA59124FD269100B74F23 /* Build configuration list for PBXNativeTarget "CuvvaCodeTest" */;
 			buildPhases = (
+				6840262B85A8DF9E44324E13 /* [CP] Check Pods Manifest.lock */,
 				337CA56E24FD269000B74F23 /* Sources */,
 				337CA56F24FD269000B74F23 /* Frameworks */,
 				337CA57024FD269000B74F23 /* Resources */,
+				9C5F9A36DF80E916F3E97E2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 337CA59424FD269100B74F23 /* Build configuration list for PBXNativeTarget "CuvvaCodeTestTests" */;
 			buildPhases = (
+				6CA8769DC788B625D15B49C4 /* [CP] Check Pods Manifest.lock */,
 				337CA58424FD269100B74F23 /* Sources */,
 				337CA58524FD269100B74F23 /* Frameworks */,
 				337CA58624FD269100B74F23 /* Resources */,
@@ -195,14 +307,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6840262B85A8DF9E44324E13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuvvaCodeTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CA8769DC788B625D15B49C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuvvaCodeTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C5F9A36DF80E916F3E97E2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CuvvaCodeTest/Pods-CuvvaCodeTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CuvvaCodeTest/Pods-CuvvaCodeTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CuvvaCodeTest/Pods-CuvvaCodeTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		337CA56E24FD269000B74F23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				337CA57A24FD269000B74F23 /* ViewController.swift in Sources */,
+				33F501CC24FD294400123A82 /* NetworkManager.swift in Sources */,
+				33F501E224FE55AF00123A82 /* HomeViewModel.swift in Sources */,
+				33F501DE24FE518600123A82 /* Payload.swift in Sources */,
+				33F501C824FD287E00123A82 /* URLBuilder.swift in Sources */,
+				33F501E624FE567E00123A82 /* HomeViewController.swift in Sources */,
 				337CA57624FD269000B74F23 /* AppDelegate.swift in Sources */,
-				337CA57824FD269000B74F23 /* SceneDelegate.swift in Sources */,
+				33F501DD24FE518600123A82 /* Policy.swift in Sources */,
+				33F501CA24FD291D00123A82 /* APIProtocol.swift in Sources */,
+				33F501DF24FE518600123A82 /* Documents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +392,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				337CA58D24FD269100B74F23 /* CuvvaCodeTestTests.swift in Sources */,
+				33F501D724FE508A00123A82 /* URLBuilderTests.swift in Sources */,
+				33F501E824FE58BB00123A82 /* APITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,10 +543,12 @@
 		};
 		337CA59224FD269100B74F23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E411AEC013B2607CDB79245B /* Pods-CuvvaCodeTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CuvvaCodeTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,10 +562,12 @@
 		};
 		337CA59324FD269100B74F23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28ADD5B4CEC262C96DAA14A9 /* Pods-CuvvaCodeTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CuvvaCodeTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +581,7 @@
 		};
 		337CA59524FD269100B74F23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E45818F9D070E800FC0BBF2 /* Pods-CuvvaCodeTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +603,7 @@
 		};
 		337CA59624FD269100B74F23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9B1BBC5279118DA7DD533BD /* Pods-CuvvaCodeTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
