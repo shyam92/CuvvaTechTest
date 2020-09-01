@@ -23,6 +23,8 @@
 		33F501E824FE58BB00123A82 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501E724FE58BB00123A82 /* APITests.swift */; };
 		33F501F824FE7EE100123A82 /* Pricing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501F724FE7EE100123A82 /* Pricing.swift */; };
 		33F501FA24FE7F2400123A82 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501F924FE7F2400123A82 /* Vehicle.swift */; };
+		33F501FD24FE994D00123A82 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501FC24FE994D00123A82 /* DatabaseManager.swift */; };
+		33F501FF24FEA6DA00123A82 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501FE24FEA6DA00123A82 /* NetworkManagerTests.swift */; };
 		6E4DA6CA4345D87403C8ED84 /* Pods_CuvvaCodeTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC827422D4C772E817E08F2 /* Pods_CuvvaCodeTest.framework */; };
 		CAC34715E67FFEAC808E4F89 /* Pods_CuvvaCodeTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B07A2DCDE6F5C59CAAB2767 /* Pods_CuvvaCodeTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		33F501E724FE58BB00123A82 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		33F501F724FE7EE100123A82 /* Pricing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pricing.swift; sourceTree = "<group>"; };
 		33F501F924FE7F2400123A82 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		33F501FC24FE994D00123A82 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		33F501FE24FEA6DA00123A82 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		4BC827422D4C772E817E08F2 /* Pods_CuvvaCodeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuvvaCodeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E45818F9D070E800FC0BBF2 /* Pods-CuvvaCodeTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuvvaCodeTestTests.debug.xcconfig"; path = "Target Support Files/Pods-CuvvaCodeTestTests/Pods-CuvvaCodeTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9B1BBC5279118DA7DD533BD /* Pods-CuvvaCodeTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuvvaCodeTestTests.release.xcconfig"; path = "Target Support Files/Pods-CuvvaCodeTestTests/Pods-CuvvaCodeTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				337CA59724FD26C600B74F23 /* Networking */,
 				337CA57524FD269000B74F23 /* AppDelegate.swift */,
 				33F501E424FE55C700123A82 /* Storyboards */,
+				33F501FB24FE974500123A82 /* Database */,
 				337CA57E24FD269100B74F23 /* Assets.xcassets */,
 				337CA58324FD269100B74F23 /* Info.plist */,
 			);
@@ -127,6 +132,7 @@
 				337CA58E24FD269100B74F23 /* Info.plist */,
 				33F501D624FE508A00123A82 /* URLBuilderTests.swift */,
 				33F501E724FE58BB00123A82 /* APITests.swift */,
+				33F501FE24FEA6DA00123A82 /* NetworkManagerTests.swift */,
 			);
 			path = CuvvaCodeTestTests;
 			sourceTree = "<group>";
@@ -176,6 +182,14 @@
 				337CA58024FD269100B74F23 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		33F501FB24FE974500123A82 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				33F501FC24FE994D00123A82 /* DatabaseManager.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		862F6747BE517ADBDDFCAE77 /* Pods */ = {
@@ -374,6 +388,7 @@
 				337CA57624FD269000B74F23 /* AppDelegate.swift in Sources */,
 				33F501F824FE7EE100123A82 /* Pricing.swift in Sources */,
 				33F501DD24FE518600123A82 /* Policy.swift in Sources */,
+				33F501FD24FE994D00123A82 /* DatabaseManager.swift in Sources */,
 				33F501FA24FE7F2400123A82 /* Vehicle.swift in Sources */,
 				33F501CA24FD291D00123A82 /* APIProtocol.swift in Sources */,
 				33F501DF24FE518600123A82 /* Documents.swift in Sources */,
@@ -384,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F501FF24FEA6DA00123A82 /* NetworkManagerTests.swift in Sources */,
 				33F501D724FE508A00123A82 /* URLBuilderTests.swift in Sources */,
 				33F501E824FE58BB00123A82 /* APITests.swift in Sources */,
 			);
