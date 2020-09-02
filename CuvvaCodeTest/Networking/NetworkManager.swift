@@ -12,7 +12,7 @@ import Foundation
  Protocol of the Network Manager so that ViewModels can use anything that conforms to it
  */
 protocol NetworkProtocol: APIProtocol {
-    typealias PoliciesDataCompletion = (Result<[Policy], APIError>) -> Void
+    typealias PoliciesDataCompletion = (Result<[APIEvent], APIError>) -> Void
     func policiesFeed(completion: PoliciesDataCompletion?)
 }
 
@@ -23,7 +23,7 @@ class NetworkManager: NetworkProtocol {
     
     let session: URLSession
     let urlBuilder: URLBuilderProtocol
-    typealias PoliciesDataCompletion = (Result<[Policy], APIError>) -> Void
+    typealias PoliciesDataCompletion = (Result<[APIEvent], APIError>) -> Void
     
     convenience init() {
         self.init(configuration: .default, urlBuilder: URLBuilder())
@@ -45,8 +45,8 @@ class NetworkManager: NetworkProtocol {
             return
         }
         
-        fetchArray(with: url, decode: { (decodable) -> [Policy]? in
-            return decodable as? [Policy]
+        fetchArray(with: url, decode: { (decodable) -> [APIEvent]? in
+            return decodable as? [APIEvent]
         }, completion: completion)
     }
 }

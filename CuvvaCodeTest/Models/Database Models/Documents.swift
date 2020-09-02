@@ -9,12 +9,18 @@
 import Foundation
 import RealmSwift
 // MARK: - Documents
-class Documents: Object, Codable {
+class Documents: Object {
     @objc dynamic var certificateURL: String?
     @objc dynamic var termsURL: String?
 
     enum CodingKeys: String, CodingKey {
         case certificateURL = "certificate_url"
         case termsURL = "terms_url"
+    }
+    
+    convenience init(certificateURL: String?, termsURL: String?) {
+        self.init()
+        self.certificateURL = certificateURL
+        self.termsURL = termsURL
     }
 }

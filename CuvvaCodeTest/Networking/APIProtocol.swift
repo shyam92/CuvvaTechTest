@@ -62,6 +62,7 @@ extension APIProtocol {
                         let genericModel = try JSONDecoder().decode(decodingType, from: data)
                         completion(genericModel, nil)
                     } catch {
+                        print(error.localizedDescription)
                         completion(nil, .invalidData)
                     }
                 } else {
@@ -123,8 +124,9 @@ extension APIProtocol {
             if httpResponse.statusCode == 200 {
                 if let data = data {
                     do {
-                        
-                        let genericModel = try JSONDecoder().decode([T].self, from: data)
+                        let jsonDecoder = JSONDecoder()
+                        jsonDecoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
+                        let genericModel = try jsonDecoder.decode([T].self, from: data)
                         completion(genericModel, nil)
                     } catch (let error) {
                         print(error)

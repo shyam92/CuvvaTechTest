@@ -15,30 +15,6 @@ class APITests: XCTestCase {
     //MARK: Fetch testing
     
     /**
-     Test downloading of data and testing if it decodes correctly
-     */
-    func testValidDecodingTask() {
-        let request = URLRequest(url: URL(string: "https://cuvva.herokuapp.com/")!)
-        let networkManger = MockNetworkManager()
-        let decodingExpectation = expectation(description: "decoding")
-        
-        let task = networkManger.decodingTask(with: request, decodingType: [Policy].self) { (json, error) in
-            decodingExpectation.fulfill()
-            guard let json = json else {
-                XCTFail("No data was parsed")
-                return
-            }
-            if let values = json as? [Policy] {
-                XCTAssertEqual(values.count, 66)
-                
-            }
-            
-        }
-        task.resume()
-        waitForExpectations(timeout: 100, handler: nil)
-    }
-
-    /**
      Test:
      - Requesting a valid url
      - invalid httpResponse
@@ -50,7 +26,7 @@ class APITests: XCTestCase {
         let networkManger = MockNetworkManager()
         let decodingExpectation = expectation(description: "invalid decoding")
 
-        let task = networkManger.decodingTask(with: request, decodingType: [Policy].self) { (json, error) in
+        let task = networkManger.decodingTask(with: request, decodingType: [APIEvent].self) { (json, error) in
             decodingExpectation.fulfill()
             guard let error = error else {
                 XCTFail("JSON data was parsed")
@@ -70,9 +46,9 @@ class APITests: XCTestCase {
         let networkManger = MockNetworkManager()
         let decodingExpectation = expectation(description: "InvalidData")
 
-        let task = networkManger.decodingTask(with: request, decodingType: Policy.self) { (json, error) in
+        let task = networkManger.decodingTask(with: request, decodingType: APIEvent.self) { (json, error) in
             decodingExpectation.fulfill()
-            if let policy = json as? Policy {
+            if let policy = json as? APIEvent {
                 XCTAssertNil(policy.uniqueKey)
             }
             
@@ -89,7 +65,7 @@ class APITests: XCTestCase {
         let networkManger = MockNetworkManager()
         let decodingExpectation = expectation(description: "NotFound")
 
-        let task = networkManger.decodingTask(with: request, decodingType: Policy.self) { (json, error) in
+        let task = networkManger.decodingTask(with: request, decodingType: APIEvent.self) { (json, error) in
             decodingExpectation.fulfill()
             guard let error = error else {
                 XCTFail("JSON data was parsed")
@@ -110,7 +86,7 @@ class APITests: XCTestCase {
         let networkManger = MockNetworkManager()
         let decodingExpectation = expectation(description: "EmptyData")
 
-        let task = networkManger.decodingTask(with: request, decodingType: Policy.self) { (json, error) in
+        let task = networkManger.decodingTask(with: request, decodingType: APIEvent.self) { (json, error) in
             decodingExpectation.fulfill()
             guard let error = error else {
                 XCTFail("JSON data was parsed")
@@ -131,13 +107,13 @@ class APITests: XCTestCase {
         let networkManger = MockNetworkManager()
         let decodingExpectation = expectation(description: "decoding")
         
-        let task = networkManger.arrayDecodingTask(with: request, decodingType: Policy.self) { (json, error) in
+        let task = networkManger.arrayDecodingTask(with: request, decodingType: APIEvent.self) { (json, error) in
             decodingExpectation.fulfill()
             guard let json = json else {
                 XCTFail("No data was parsed")
                 return
             }
-            if let values = json as? [Policy] {
+            if let values = json as? [APIEvent] {
                 XCTAssertEqual(values.count, 66)
                 
             }
@@ -159,7 +135,7 @@ class APITests: XCTestCase {
         let networkManger = MockNetworkManager()
         let decodingExpectation = expectation(description: "invalid decoding")
 
-        let task = networkManger.arrayDecodingTask(with: request, decodingType: Policy.self) { (json, error) in
+        let task = networkManger.arrayDecodingTask(with: request, decodingType: APIEvent.self) { (json, error) in
             decodingExpectation.fulfill()
             guard let error = error else {
                 XCTFail("JSON data was parsed")
@@ -179,7 +155,7 @@ class APITests: XCTestCase {
         let networkManger = MockNetworkManager()
         let decodingExpectation = expectation(description: "InvalidData")
 
-        let task = networkManger.arrayDecodingTask(with: request, decodingType: Policy.self) { (json, error) in
+        let task = networkManger.arrayDecodingTask(with: request, decodingType: APIEvent.self) { (json, error) in
             decodingExpectation.fulfill()
             guard let error = error else {
                 XCTFail("JSON data was parsed")
@@ -199,7 +175,7 @@ class APITests: XCTestCase {
         let networkManger = MockNetworkManager()
         let decodingExpectation = expectation(description: "NotFound")
 
-        let task = networkManger.arrayDecodingTask(with: request, decodingType: Policy.self) { (json, error) in
+        let task = networkManger.arrayDecodingTask(with: request, decodingType: APIEvent.self) { (json, error) in
             decodingExpectation.fulfill()
             guard let error = error else {
                 XCTFail("JSON data was parsed")
@@ -220,7 +196,7 @@ class APITests: XCTestCase {
         let networkManger = MockNetworkManager()
         let decodingExpectation = expectation(description: "EmptyData")
 
-        let task = networkManger.arrayDecodingTask(with: request, decodingType: Policy.self) { (json, error) in
+        let task = networkManger.arrayDecodingTask(with: request, decodingType: APIEvent.self) { (json, error) in
             decodingExpectation.fulfill()
             guard let error = error else {
                 XCTFail("JSON data was parsed")
@@ -254,7 +230,7 @@ class MockNetworkManager: NetworkProtocol {
             return
         }
         fetchArray(with: url, decode: { data in
-            guard let policies = data as? [Policy] else {
+            guard let policies = data as? [APIEvent] else {
                 return nil
             }
             return policies
