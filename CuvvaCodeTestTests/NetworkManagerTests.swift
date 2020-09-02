@@ -14,7 +14,7 @@ class NetworkManagerTests: XCTestCase {
         let networkManager = NetworkManager()
         
         let policyExpectation = expectation(description: "data")
-        var dataReturned: [Policy]?
+        var dataReturned: [APIEvent]?
         
         networkManager.policiesFeed { (result) in
             switch result {
