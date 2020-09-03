@@ -24,7 +24,7 @@ class HomeViewModel {
     typealias DataCompletion = (Result<[[Vehicle]], APIError>, ViewModelSource) -> Void
     
     var dataSource = [[Vehicle]]()
-    
+        
     // Constructer
     init(networkManager: NetworkProtocol = NetworkManager(),
          databaseManager: DatabaseProtocol = DatabaseManager(),
@@ -45,7 +45,7 @@ class HomeViewModel {
         }
     }
  
-    func fetchData(from sources: [ViewModelSource] = [.api, .database], completion: DataCompletion? = nil) {
+    private func fetchData(from sources: [ViewModelSource] = [.api, .database], completion: DataCompletion? = nil) {
         if sources.contains(.database) {
             fetchDataFromDatabase(completion: completion)
         }
@@ -55,7 +55,7 @@ class HomeViewModel {
         
     }
     
-    func fetchDataFromDatabase(completion: DataCompletion? = nil) {
+    private func fetchDataFromDatabase(completion: DataCompletion? = nil) {
         guard  let data = databaseManager.fetchObjects(for: Vehicle.self) as? [Vehicle] else {
             completion?(Result.failure(APIError.invalidData), .database)
             return
@@ -65,7 +65,7 @@ class HomeViewModel {
       }
       
     
-    func fetchDataFromAPI(completion: DataCompletion? = nil) {
+    private func fetchDataFromAPI(completion: DataCompletion? = nil) {
         networkManager.policiesFeed {[weak self] (result) in
             guard let weakSelf = self else { return }
             switch result {
@@ -84,7 +84,7 @@ class HomeViewModel {
     }
     
     
-    func sortDataToActivePoliciesFirst(data: [Vehicle]) -> [[Vehicle]] {
+    private func sortDataToActivePoliciesFirst(data: [Vehicle]) -> [[Vehicle]] {
         var activePolicies = [Policy]()
         var activePoliciesOnVehicles = [Vehicle]()
         data.forEach({ vehicle in
@@ -107,9 +107,19 @@ class HomeViewModel {
     }
     
      
-     func saveAPIDataToDatabase(data: [Vehicle]) {
+     private func saveAPIDataToDatabase(data: [Vehicle]) {
          databaseManager.addObjects(with: data)
      }
+    
+    
+    func getActivePolicy(from vehicle: Vehicle) -> Policy? {
+        var activePolicy: Policy?
+        activePolicy = vehicle.policies.filter({$0.isActive}).first
+        if activePolicy == nil {
+            vehicle.policies.forEach({ activePolicy = $0.extensionPolicies.filter({$0.isActive}).first })
+        }
+        return activePolicy
+    }
 }
 
 enum ViewModelSource {

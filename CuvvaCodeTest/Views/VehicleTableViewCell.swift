@@ -26,7 +26,7 @@ class VehicleTableViewCell: UITableViewCell {
         self.backgroundColor = UIColor(named: "Secondary CTA")?.withAlphaComponent(0.05)
     }
 
-    func setup(with vehicle: Vehicle, isActive: Bool) {
+    func setup(with vehicle: Vehicle, isActive: Bool, activePolicy: Policy? = nil) {
         let makeString = vehicle.make?.rawValue ?? ""
         carLogoImageView.image = UIImage(named: makeString.lowercased())
         carMakeTitleLabel.text = makeString
@@ -38,11 +38,15 @@ class VehicleTableViewCell: UITableViewCell {
         CTAButton.setTitleColor(UIColor(named: "Secondary CTA")?.withAlphaComponent(0.75), for: .normal)
         
         policyTimeRemainingHeighConstraint.constant = 0
-        if isActive {
+        
+        if isActive, let policy = activePolicy {
             policyTimeRemainingHeighConstraint.constant = 32
             CTAButton.backgroundColor = UIColor(named: "Primary CTA")
             CTAButton.setTitle("Extend", for: .normal)
             CTAButton.setTitleColor(UIColor.white, for: .normal)
+            guard let endDate = policy.endDate else { return }
+            let minsLeft = Date().getMinsTo(date: endDate)
+            policyTimeRemainingLabel.text = "\(minsLeft) minutes remaining"
         }
     }
 

@@ -52,7 +52,8 @@ extension HomeViewController: UITableViewDataSource {
         guard let data = viewModel?.dataSource[indexPath.section][indexPath.row] else {
             return cell
         }
-        cell.setup(with: data, isActive: indexPath.section == 0)
+        let isActive = indexPath.section == 0
+        cell.setup(with: data, isActive: isActive, activePolicy: viewModel?.getActivePolicy(from: data))
         return cell
     }
 }
