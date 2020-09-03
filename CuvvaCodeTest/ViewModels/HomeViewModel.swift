@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol HomeViewDelegate {
+protocol HomeViewDelegate: class {
     func didReceiveData(from apiSource: ViewModelSource)
     func didReceiveError(from apiSource: ViewModelSource, error: Error)
 }
@@ -19,7 +19,7 @@ class HomeViewModel {
     private let networkManager: NetworkProtocol
     private let databaseManager: DatabaseProtocol
     private let dataTransformer: DataTransformerProtocol
-    private let delegate: HomeViewDelegate
+    private weak var delegate: HomeViewDelegate?
     
     typealias DataCompletion = (Result<[[Vehicle]], APIError>, ViewModelSource) -> Void
     

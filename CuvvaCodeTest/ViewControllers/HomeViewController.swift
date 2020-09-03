@@ -30,7 +30,7 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func didReceiveError(from apiSource: ViewModelSource, error: Error) {
-        
+        // Send alert
     }
     
 }
@@ -46,14 +46,13 @@ extension HomeViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Vehicles", for: indexPath) as? VehicleTableViewCell else {
+        guard let viewModel = viewModel,
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Vehicles", for: indexPath) as? VehicleTableViewCell else {
             return UITableViewCell()
         }
-        guard let data = viewModel?.dataSource[indexPath.section][indexPath.row] else {
-            return cell
-        }
-        let isActive = indexPath.section == 0
-        cell.setup(with: data, isActive: isActive, activePolicy: viewModel?.getActivePolicy(from: data))
+        let data = viewModel.dataSource[indexPath.section][indexPath.row]
+        let isActive = indexPath.section == 0 && viewModel.dataSource.count > 1
+        cell.setup(with: data, isActive: isActive, activePolicy: viewModel.getActivePolicy(from: data))
         return cell
     }
 }
@@ -62,8 +61,10 @@ extension HomeViewController: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let viewModel = viewModel else { return nil }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Header") as? HeaderTableViewCell
-        cell?.headerTitleLabel.text = section == 0 ? "Active policies" : "Vehicles"
+        let isActive = section == 0 && viewModel.dataSource.count > 1
+        cell?.headerTitleLabel.text = isActive ? "Active policies" : "Vehicles"
         return cell
     }
     
@@ -72,9 +73,25 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section > 0 {
-            return 132
+        guard let viewModel = viewModel else { return 132 }
+        let isActive = indexPath.section == 0 && viewModel.dataSource.count > 1
+        if isActive {
+            return 158
         }
-        return 158
+        return 132
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let data = viewModel?.dataSource[indexPath.section][indexPath.row] else {
+            return
+        }
+        
+        if let policyViewController = storyboard?.instantiateViewController(withIdentifier: "PolicyViewController") as? PolicyViewController {
+            let viewModel = PolicyViewModel(with: data)
+            policyViewController.viewModel = viewModel
+            policyViewController.modalPresentationStyle = .fullScreen
+            self.navigationController?.present(policyViewController, animated: true, completion: nil)
+        }
+        
     }
 }

@@ -13,6 +13,8 @@
 		331EF2B424FF7640002C833D /* APIVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331EF2B324FF7640002C833D /* APIVehicle.swift */; };
 		331EF2B624FF87B2002C833D /* APIDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331EF2B524FF87B2002C833D /* APIDocuments.swift */; };
 		331EF2B824FF87DD002C833D /* APIPricing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331EF2B724FF87DD002C833D /* APIPricing.swift */; };
+		3325A9D625013CC200DCD282 /* ActivePolicyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325A9D525013CC200DCD282 /* ActivePolicyTableViewCell.swift */; };
+		3325A9D825014B3100DCD282 /* PreviousPolicyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325A9D725014B3000DCD282 /* PreviousPolicyTableViewCell.swift */; };
 		335FB7F724FFD8F6002FE75F /* DataTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB7F624FFD8F6002FE75F /* DataTransformerTests.swift */; };
 		335FB7F924FFDCB7002FE75F /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB7F824FFDCB7002FE75F /* JsonData.swift */; };
 		335FB7FB24FFEE67002FE75F /* Realm+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB7FA24FFEE67002FE75F /* Realm+Decodable.swift */; };
@@ -22,6 +24,8 @@
 		337CA58224FD269100B74F23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337CA58024FD269100B74F23 /* LaunchScreen.storyboard */; };
 		33845E8325011ED8000421FE /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845E8225011ED8000421FE /* VehicleTableViewCell.swift */; };
 		33845E8525012686000421FE /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845E8425012686000421FE /* HeaderTableViewCell.swift */; };
+		33845E8725012BA2000421FE /* PolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845E8625012BA2000421FE /* PolicyViewController.swift */; };
+		33845E8925013395000421FE /* PolicyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33845E8825013395000421FE /* PolicyViewModel.swift */; };
 		33C8774624FFC1AF00726371 /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8774524FFC1AF00726371 /* DataTransformer.swift */; };
 		33F501C824FD287E00123A82 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501C724FD287E00123A82 /* URLBuilder.swift */; };
 		33F501CA24FD291D00123A82 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F501C924FD291D00123A82 /* APIProtocol.swift */; };
@@ -61,6 +65,8 @@
 		331EF2B324FF7640002C833D /* APIVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIVehicle.swift; sourceTree = "<group>"; };
 		331EF2B524FF87B2002C833D /* APIDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDocuments.swift; sourceTree = "<group>"; };
 		331EF2B724FF87DD002C833D /* APIPricing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPricing.swift; sourceTree = "<group>"; };
+		3325A9D525013CC200DCD282 /* ActivePolicyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePolicyTableViewCell.swift; sourceTree = "<group>"; };
+		3325A9D725014B3000DCD282 /* PreviousPolicyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousPolicyTableViewCell.swift; sourceTree = "<group>"; };
 		335FB7F624FFD8F6002FE75F /* DataTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformerTests.swift; sourceTree = "<group>"; };
 		335FB7F824FFDCB7002FE75F /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
 		335FB7FA24FFEE67002FE75F /* Realm+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Decodable.swift"; sourceTree = "<group>"; };
@@ -74,6 +80,8 @@
 		337CA58E24FD269100B74F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33845E8225011ED8000421FE /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
 		33845E8425012686000421FE /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		33845E8625012BA2000421FE /* PolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyViewController.swift; sourceTree = "<group>"; };
+		33845E8825013395000421FE /* PolicyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyViewModel.swift; sourceTree = "<group>"; };
 		33C8774524FFC1AF00726371 /* DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformer.swift; sourceTree = "<group>"; };
 		33F501C724FD287E00123A82 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		33F501C924FD291D00123A82 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
@@ -216,6 +224,8 @@
 			children = (
 				33845E8225011ED8000421FE /* VehicleTableViewCell.swift */,
 				33845E8425012686000421FE /* HeaderTableViewCell.swift */,
+				3325A9D525013CC200DCD282 /* ActivePolicyTableViewCell.swift */,
+				3325A9D725014B3000DCD282 /* PreviousPolicyTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				33F501E124FE55AF00123A82 /* HomeViewModel.swift */,
+				33845E8825013395000421FE /* PolicyViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -242,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				33F501E524FE567E00123A82 /* HomeViewController.swift */,
+				33845E8625012BA2000421FE /* PolicyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -463,16 +475,20 @@
 				33F501F824FE7EE100123A82 /* Pricing.swift in Sources */,
 				33F501DD24FE518600123A82 /* Policy.swift in Sources */,
 				33F501FD24FE994D00123A82 /* DatabaseManager.swift in Sources */,
+				33845E8925013395000421FE /* PolicyViewModel.swift in Sources */,
 				33F501FA24FE7F2400123A82 /* Vehicle.swift in Sources */,
 				33C8774624FFC1AF00726371 /* DataTransformer.swift in Sources */,
 				331EF2B624FF87B2002C833D /* APIDocuments.swift in Sources */,
 				331EF2AA24FECC1D002C833D /* Date+DateFormatter+Extension.swift in Sources */,
 				33845E8525012686000421FE /* HeaderTableViewCell.swift in Sources */,
 				33F501CA24FD291D00123A82 /* APIProtocol.swift in Sources */,
+				3325A9D625013CC200DCD282 /* ActivePolicyTableViewCell.swift in Sources */,
+				3325A9D825014B3100DCD282 /* PreviousPolicyTableViewCell.swift in Sources */,
 				33845E8325011ED8000421FE /* VehicleTableViewCell.swift in Sources */,
 				33F501DF24FE518600123A82 /* Documents.swift in Sources */,
 				331EF2B224FF75DA002C833D /* APIPayload.swift in Sources */,
 				331EF2B824FF87DD002C833D /* APIPricing.swift in Sources */,
+				33845E8725012BA2000421FE /* PolicyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

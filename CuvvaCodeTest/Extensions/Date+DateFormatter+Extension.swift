@@ -27,4 +27,26 @@ extension Date {
     func getMinsTo(date: Date) -> Int {        
         return Calendar.current.dateComponents([.minute], from: self, to: date).minute!
     }
+    
+  
+    func toString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E, d"
+        let dayDate = dateFormatter.string(from: self)
+        let suffix = daySuffix(from: self)
+        dateFormatter.dateFormat = "MMM yyyy"
+        let monthYear = dateFormatter.string(from: self)
+        return dayDate + suffix + " " + monthYear
+    }
+    
+    func daySuffix(from date: Date) -> String {
+        let calendar = Calendar.current
+        let dayOfMonth = calendar.component(.day, from: date)
+        switch dayOfMonth {
+        case 1, 21, 31: return "st"
+        case 2, 22: return "nd"
+        case 3, 23: return "rd"
+        default: return "th"
+        }
+    }
 }

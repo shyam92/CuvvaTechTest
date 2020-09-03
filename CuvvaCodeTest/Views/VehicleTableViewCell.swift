@@ -49,5 +49,17 @@ class VehicleTableViewCell: UITableViewCell {
             policyTimeRemainingLabel.text = "\(minsLeft) minutes remaining"
         }
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        CTAButton.backgroundColor = UIColor(named: "Secondary CTA")?.withAlphaComponent(0.05)
+        CTAButton.setTitle("Insure", for: .normal)
+        CTAButton.setTitleColor(UIColor(named: "Secondary CTA")?.withAlphaComponent(0.75), for: .normal)
+        carLogoImageView.image = nil
+        carMakeTitleLabel.text = nil
+        carDescriptionLabel.text = nil
+        regPlateLabel.text = nil
+        totalPoliciesLabel.text = nil
+    }
 
 }
