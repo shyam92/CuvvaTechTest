@@ -67,6 +67,7 @@
 		331EF2B724FF87DD002C833D /* APIPricing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPricing.swift; sourceTree = "<group>"; };
 		3325A9D525013CC200DCD282 /* ActivePolicyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePolicyTableViewCell.swift; sourceTree = "<group>"; };
 		3325A9D725014B3000DCD282 /* PreviousPolicyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousPolicyTableViewCell.swift; sourceTree = "<group>"; };
+		3325A9D92501685600DCD282 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		335FB7F624FFD8F6002FE75F /* DataTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformerTests.swift; sourceTree = "<group>"; };
 		335FB7F824FFDCB7002FE75F /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
 		335FB7FA24FFEE67002FE75F /* Realm+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Decodable.swift"; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 		337CA56924FD269000B74F23 = {
 			isa = PBXGroup;
 			children = (
+				3325A9D92501685600DCD282 /* Readme.md */,
 				337CA57424FD269000B74F23 /* CuvvaCodeTest */,
 				337CA58B24FD269100B74F23 /* CuvvaCodeTestTests */,
 				337CA57324FD269000B74F23 /* Products */,
