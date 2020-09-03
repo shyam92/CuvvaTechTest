@@ -15,7 +15,7 @@ class Transaction: Object {
     @objc dynamic var key: String?
     
     /// Policy relationship: Inverse
-    let policyElement = LinkingObjects(fromType: Policy.self, property: PolicyItemKeys.transaction.rawValue)
+    let policyElement = LinkingObjects(fromType: Policy.self, property: Policy.PolicyItemKeys.transaction.rawValue)
 
     
     /// Realm Inverse Relationship Keys

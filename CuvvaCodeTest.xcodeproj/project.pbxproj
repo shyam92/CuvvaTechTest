@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		331EF2AA24FECC1D002C833D /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331EF2A924FECC1D002C833D /* DateFormatter+Extension.swift */; };
+		331EF2AA24FECC1D002C833D /* Date+DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331EF2A924FECC1D002C833D /* Date+DateFormatter+Extension.swift */; };
 		331EF2B024FF757F002C833D /* APIEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331EF2AF24FF757F002C833D /* APIEvent.swift */; };
 		331EF2B224FF75DA002C833D /* APIPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331EF2B124FF75DA002C833D /* APIPayload.swift */; };
 		331EF2B424FF7640002C833D /* APIVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331EF2B324FF7640002C833D /* APIVehicle.swift */; };
@@ -53,7 +53,7 @@
 /* Begin PBXFileReference section */
 		0B07A2DCDE6F5C59CAAB2767 /* Pods_CuvvaCodeTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuvvaCodeTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28ADD5B4CEC262C96DAA14A9 /* Pods-CuvvaCodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuvvaCodeTest.release.xcconfig"; path = "Target Support Files/Pods-CuvvaCodeTest/Pods-CuvvaCodeTest.release.xcconfig"; sourceTree = "<group>"; };
-		331EF2A924FECC1D002C833D /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		331EF2A924FECC1D002C833D /* Date+DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		331EF2AF24FF757F002C833D /* APIEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEvent.swift; sourceTree = "<group>"; };
 		331EF2B124FF75DA002C833D /* APIPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPayload.swift; sourceTree = "<group>"; };
 		331EF2B324FF7640002C833D /* APIVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIVehicle.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		331EF2A824FECC06002C833D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				331EF2A924FECC1D002C833D /* DateFormatter+Extension.swift */,
+				331EF2A924FECC1D002C833D /* Date+DateFormatter+Extension.swift */,
 				335FB7FA24FFEE67002FE75F /* Realm+Decodable.swift */,
 			);
 			path = Extensions;
@@ -452,7 +452,7 @@
 				33F501FA24FE7F2400123A82 /* Vehicle.swift in Sources */,
 				33C8774624FFC1AF00726371 /* DataTransformer.swift in Sources */,
 				331EF2B624FF87B2002C833D /* APIDocuments.swift in Sources */,
-				331EF2AA24FECC1D002C833D /* DateFormatter+Extension.swift in Sources */,
+				331EF2AA24FECC1D002C833D /* Date+DateFormatter+Extension.swift in Sources */,
 				33F501CA24FD291D00123A82 /* APIProtocol.swift in Sources */,
 				33F501DF24FE518600123A82 /* Documents.swift in Sources */,
 				331EF2B224FF75DA002C833D /* APIPayload.swift in Sources */,

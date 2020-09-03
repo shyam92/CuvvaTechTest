@@ -39,6 +39,13 @@ class Policy: Object {
         }
     }
     
+    var isActive: Bool {
+        guard let start = startDate, let end = endDate else {
+            return false
+        }
+        return Date().isBetween(start, and: end)
+    }
+    
     override class func primaryKey() -> String? {
         return PolicyItemKeys.uniqueKey.rawValue
     }
@@ -69,7 +76,18 @@ class Policy: Object {
         self.documents = documents
     }
     
-    
+
+    /// Realm Inverse Relationship Keys
+    enum PolicyItemKeys: String {
+        case typeString
+        case uniqueKey
+        case timestamp
+        case documents
+        case pricing
+        case transaction
+        case extensionPolicies
+    }
+
 }
 
 
@@ -78,14 +96,4 @@ enum Type: String, Codable {
     case policyCancelled = "policy_cancelled"
     case policyCreated = "policy_created"
     case policyFinancialTransaction = "policy_financial_transaction"
-}
-/// Realm Inverse Relationship Keys
-enum PolicyItemKeys: String {
-    case typeString
-    case uniqueKey
-    case timestamp
-    case documents
-    case pricing
-    case transaction
-    
 }
